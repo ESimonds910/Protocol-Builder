@@ -1,11 +1,12 @@
+import json
+import os
+from pathlib import Path
+import pandas as pd
 import ipywidgets as ipw
+from openpyxl import load_workbook
 from IPython.display import display
 # from db_control.db_restructure import Db
 from config import config, Headers, FixedHiPrBindCalcs
-import json
-import os
-import pandas as pd
-from openpyxl import load_workbook
 
 
 # class DbQuery(Db):
@@ -15,7 +16,9 @@ from openpyxl import load_workbook
 
 class ExcelData:
     def __init__(self):
-        self.file_path = r"L:\High Throughput Screening\HiPrBind\HiPrBind Inventory Tracking.xlsx"
+        # self.file_path = r"L:\High Throughput Screening\HiPrBind\HiPrBind Inventory Tracking.xlsx"
+        # self.file_path = Path.home().joinpath("Protocol-Builder", "templates", "HiPrBind Inventory Tracking.xlsx")
+        self.file_path = f"templates/HiPrBind Inventory Tracking.xlsx"
         self.worksheet = 'Project Specific Reagents'
         self.reagent_data = self.import_data()
 
@@ -1178,9 +1181,12 @@ class TemplateBuilder:
         self.proj_file_option = input_dict["proj_file_option"]
         self.proj_type = input_dict["proj_type"]
         self.project_scheme = input_dict["project_scheme"]
-        self.output_folder = r"L:\High Throughput Screening\Personnel\Matthew Currie"
-        self.ssf_path = r"L:\High Throughput Screening\HiPrBind\SSF HPB runs"
-        self.ferm_path = r"L:\High Throughput Screening\HiPrBind\Ferm HPB runs"
+        # self.output_folder = r"L:\High Throughput Screening\Personnel\Matthew Currie"
+        self.output_folder = r"outputs/"
+        # self.ssf_path = r"L:\High Throughput Screening\HiPrBind\SSF HPB runs"
+        self.ssf_path = r"templates/SSF HPB runs"
+        self.ferm_path = r"templates/Ferm HPB runs"
+        # self.ferm_path = r"L:\High Throughput Screening\HiPrBind\Ferm HPB runs"
         self.parent_directory = f"{self.proj_id}_{self.project_name}_{self.proj_type}"
         self.sub_directory = "Analysis"
         # self.output_file = self.output_folder + r'\test_output.xlsx'
@@ -1330,7 +1336,8 @@ class Templates:
                 assays=(62, 2),
                 pd_vols_data=(52, 13)
             )
-            wb = load_workbook(r"L:\High Throughput Screening\Personnel\Matthew Currie\Standard Protocol_FER_tabs.xlsx")
+            # wb = load_workbook(r"L:\High Throughput Screening\Personnel\Matthew Currie\Standard Protocol_FER_tabs.xlsx")
+            wb = load_workbook(r"templates/Standard Protocol_FER_tabs.xlsx")
         else:
             location_dict = dict(
                 project="B1",
@@ -1369,7 +1376,8 @@ class Templates:
             )
             self.template_dict['location_dict'] = location_dict
 
-            wb = load_workbook(r"L:\High Throughput Screening\Personnel\Matthew Currie\Standard Protocol_SSF_tabs.xlsx")
+            # wb = load_workbook(r"L:\High Throughput Screening\Personnel\Matthew Currie\Standard Protocol_SSF_tabs.xlsx")
+            wb = load_workbook(r"templates/Standard Protocol_SSF_tabs.xlsx")
 
         self.template_dict['location_dict'] = location_dict
         self.template_dict['workbook'] = wb
