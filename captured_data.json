@@ -4,7 +4,7 @@
     "project_scheme": 1,
     "proj_id": "Test",
     "proj_file_option": "",
-    "proj_type": "SSF_LS",
+    "proj_type": "Fermentation",
     "source": 4,
     "replicates": "n + 2",
     "pd": 0,
