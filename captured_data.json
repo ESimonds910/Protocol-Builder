@@ -2,7 +2,7 @@
     "project": "Spaniel",
     "project_name_id": 9,
     "project_scheme": 1,
-    "proj_id": "SSF123",
+    "proj_id": "SSF213",
     "proj_file_option": "",
     "proj_type": "SSF_LS",
     "source": 4,
@@ -23,13 +23,13 @@
     "dbi_vol": 200,
     "dbii_vol": 100,
     "dil_vols": {
-        "dil_vol_1": 10,
-        "dil_vol_2": 10,
-        "dil_vol_3": 10,
-        "dil_vol_4": 10
+        "dil_vol_1": 5,
+        "dil_vol_2": 5,
+        "dil_vol_3": 5,
+        "dil_vol_4": 5
     },
     "points": 4,
-    "cell_resus": 200,
+    "cell_resus": 100,
     "standard_stock": {
         "standard_stock_conc": 0.0,
         "standard_stock_mw": 0
