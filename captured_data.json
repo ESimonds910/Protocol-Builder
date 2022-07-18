@@ -1,12 +1,12 @@
 {
-    "project": "Bloodhound",
-    "project_name_id": 3,
+    "project": "Spaniel",
+    "project_name_id": 9,
     "project_scheme": 1,
-    "proj_id": "FER656",
-    "proj_file_option": "Native",
-    "proj_type": "Fermentation",
-    "source": 2,
-    "replicates": "n * 2",
+    "proj_id": "SSF123",
+    "proj_file_option": "",
+    "proj_type": "SSF_LS",
+    "source": 4,
+    "replicates": "n + 1",
     "pd": 0,
     "pd_vols": {
         "pd_1_vol": 0,
@@ -20,16 +20,16 @@
         "pd_3_spike": 0,
         "pd_4_spike": 0
     },
-    "dbi_vol": 300,
-    "dbii_vol": 75,
+    "dbi_vol": 200,
+    "dbii_vol": 100,
     "dil_vols": {
-        "dil_vol_1": 25,
-        "dil_vol_2": 25,
-        "dil_vol_3": 25,
-        "dil_vol_4": 25
+        "dil_vol_1": 10,
+        "dil_vol_2": 10,
+        "dil_vol_3": 10,
+        "dil_vol_4": 10
     },
-    "points": 8,
-    "cell_resus": 15,
+    "points": 4,
+    "cell_resus": 200,
     "standard_stock": {
         "standard_stock_conc": 0.0,
         "standard_stock_mw": 0
@@ -52,5 +52,5 @@
     "standard_wells": 2,
     "standard_plates": 0,
     "standard_vol": 0,
-    "run_notes": "This is a BLP run using the Native scheme.\n\nNo standards or spike samples are required. \n\nPlates are being prepped same day as run is taking place, 5/26/2022. Sample tubes are in Kylo Ren tray 10."
+    "run_notes": ""
 }
